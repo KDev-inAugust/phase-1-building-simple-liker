@@ -3,6 +3,16 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
+let like = document.querySelectorAll('li');
+
+
+like.forEach(item => item.addEventListener('click',
+mimicServerCall()
+//.then(res=> res.json())
+.then(msg => document.getElementById('modal').innerText=`${msg}`)
+.catch(()=> document.getElementById('modal').class="")
+)
+)
 
 
 
